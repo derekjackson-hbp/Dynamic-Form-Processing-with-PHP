@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title>Dynamic Form Processing with PHP | Tech Stream</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link rel="stylesheet" type="text/css" href="css/default.css"/>
+		<script type="text/javascript" src="js/script.js"></script> 
+    </head>
+    <body>    
+        <form action="process.php" class="register" method="POST">
+            <h1>Index</h1>
+			<fieldset class="row1">
+                <legend>Index Group A</legend>
+			    <select name="group">
+			        <option selected>A</option>
+			    </select>
+			    
+               
+                <p>
+					<label>Index Term
+                    </label>
+                    <input name="from" required="required" type="text"/>
+					<label>Does this term have a sub group?</label>
+                    <label>no</label>
+                    <input name="hasSubGroup" id="no" type="radio"></input>
+                    <label>yes</label>
+                    <input name="hasSubGroup" id="yes" type="radio"></input>
+                </p>
+              
+				<div class="clear"></div>
+            </fieldset>
+            <fieldset class="row2">
+				<legend>term page and location</legend>
+				<p> 
+					<input type="button" value="Add Location" onClick="addRow('dataTable')" /> 
+					<input type="button" value="Remove Location" onClick="deleteRow('dataTable')"  /> 
+					<p>(All actions apply only to entries with check marked check boxes only.)</p>
+				</p>
+               <table id="dataTable" class="form" border="1">
+                  <tbody>
+                    <tr>
+                      <p>
+						<td><input type="checkbox" required="required" name="chk[]" checked="checked" /></td>
+						<td>
+							<label>Start Page</label>
+							<input type="text" required="required" name="BX_NAME[]">
+						 </td>
+						 <td>
+							<label for="BX_age">Start Paragraph</label>
+							<input type="text" required="required" name="BX_age[]">
+					     </td>
+						 <td>
+							<label for="BX_gender">End Page</label>
+							<input id="BX_gender" name="BX_gender" required="required" type="text"></input>
+						 </td>
+						 <td>
+							<label for="BX_birth">End Paragraph</label>
+						     <input id="BX_birth" name="BX_birth" required="required" type="text"></input>
+						 </td>
+							</p>
+                    </tr>
+                    </tbody>
+                </table>
+				<div class="clear"></div>
+            </fieldset>
+            <fieldset class="row4">
+                <legend>Submitting</legend>
+                <p class="agreement">
+                    <input type="checkbox" value="" required="required"/>
+                    <label>*  Ready to Submit</a></label>
+                </p>
+                
+				
+				<div class="clear"></div>
+            </fieldset>
+			<input class="submit" type="submit" value="Confirm &raquo;" />
+			
+			
+			<div class="clear"></div>
+        </form>
+		
+    </body>
+	<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=9046834; 
+var sc_invisible=1; 
+var sc_security="ec55ba17"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="free hit
+counter" href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="http://c.statcounter.com/9046834/0/ec55ba17/1/"
+alt="free hit counter"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+</html>
+
+
+
+
+
