@@ -110,8 +110,8 @@
                 <legend>Terms and Mailing</legend>
                 <p>
 					<input class="submit" type="button" value="Make Payment &raquo;" />
-					<a class="submit" href="index.html" type="button"> Back To Demo <a/>
-					<a class="submit" href="http://techstream.org/Web-Development/PHP/Dynamic-Form-Processing-with-PHP"/>Back to Tech Stream Article</a>
+					<a target="blank" class="submit" href=<?php echo '"test_'.$group.'.txt" type="button">' ?> review .txt XML <a/>
+					<a class="submit" href=<?php echo '"index_'.$group.'.html" type="button">'?>next Term</a>
                 </p>
 				<div class="clear"></div>
             </fieldset>
