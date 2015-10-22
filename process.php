@@ -24,7 +24,7 @@
 				$BX_birth=$_POST['BX_birth'];	
 				$group=$_POST['group'];
 				
-		 echo file_put_contents ( 'test_'.$group.'.txt', '<index>'.$from.'</index>' , FILE_APPEND); ?>				
+		 echo file_put_contents ( 'test_'.$group.'.txt', '<index>'.$from.'</index>'."\n" , FILE_APPEND); ?>				
 			
 			<fieldset class="row1">
                 <legend>Travel Information</legend>
