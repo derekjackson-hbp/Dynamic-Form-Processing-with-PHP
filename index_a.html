@@ -15,14 +15,23 @@
 			        <option selected>A</option>
 			    </select>
 			</fieldset>
-        	<div class="accordion">
+        	<input type="button" value="Add term" onClick="addRow('terms')" /> 
+        	<input type="button" value="Remove term" onClick="deleteRow('terms')"  /> 
+        	
         		
+        		<table id="terms" class="form">
+        			<tbody>
+        				<tr>
+        					<td>
         	<fieldset class="row1">
+        		
         		<p><label>Index Term
         		</label></p>
         		<input name="from" required="required" type="text"/>
-				
-					<i></i>   
+        					
+					<i></i> 
+        					</td>
+        					<td>
                 <p>
 					
                     
@@ -32,18 +41,26 @@
                     <label>yes</label>
                     <input name="hasSubGroup" id="yes" type="radio"></input>
                 </p>
-              
+        					</td>
+        				
 				
             </fieldset>
+        				</tr>
+       <tr>
+       	<td>
         	<div class="clear"></div>
-            <fieldset class="row2">
-				<legend>term page and location</legend>
+        				
+        					<fieldset>
+				<legend>page and location</legend>
 				<p> 
 					<input type="button" value="Add Location" onClick="addRow('dataTable')" /> 
 					<input type="button" value="Remove Location" onClick="deleteRow('dataTable')"  /> 
 					<p>(All actions apply only to entries with check marked check boxes only.)</p>
 				</p>
-               <table id="dataTable" class="form" border="1">
+        					</fieldset>
+       	</td>
+       	<td>
+       		<table id="dataTable" class="form" border="1">
                   <tbody>
                     <tr>
                       <p>
@@ -58,19 +75,23 @@
 					     </td>
 						 <td>
 							<label for="BX_gender">End Page</label>
-							<input id="BX_gender" name="BX_gender" required="required" type="text"></input>
+							<input id="BX_gender" name="BX_gender[]" required="required" type="text"></input>
 						 </td>
 						 <td>
 							<label for="BX_birth">End Paragraph</label>
-						     <input id="BX_birth" name="BX_birth" required="required" type="text"></input>
+						     <input id="BX_birth" name="BX_birth[]" required="required" type="text"></input>
 						 </td>
 							</p>
                     </tr>
                     </tbody>
                 </table>
+       	</td>
 				<div class="clear"></div>
             </fieldset>
-        
+       </tr>
+        			</tbody>
+            </table>
+
         </div>
             <fieldset class="row4">
                 <legend>Submitting</legend>

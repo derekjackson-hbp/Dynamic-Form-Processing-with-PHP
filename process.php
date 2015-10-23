@@ -23,11 +23,39 @@
 				$BX_gender=$_POST['BX_gender'];
 				$BX_birth=$_POST['BX_birth'];	
 				$group=$_POST['group'];
+				$pages = count($BX_NAME);
 				
-		 echo file_put_contents ( 'test_'.$group.'.txt', '<index>'.$from.'</index>'."\n" , FILE_APPEND); ?>				
+				
+		 echo file_put_contents ( 'test_'.$group.'.txt', "\n".'<entry>'."\n".
+		 '<term>'.$from.'</term>'."\n".
+		 '<finders>'."\n", FILE_APPEND); 
+		 
+		 $i = 0;
+		 
+		 do { 
+		 
+		 echo file_put_contents ('test_'.$group.'.txt', 
+		 '<start>'."\n".
+		 '<paragraph>'.$BX_age[$i].'</paragraph>'."\n".
+		 '<page>'.$BX_NAME[$i].'</page>'."\n".
+		 '</start>'."\n".
+		 '<end>'."\n".
+		 '<paragraph>'.$BX_birth[$i].'</paragraph>'."\n".
+		 '<page>'.$BX_gender[$i].'</page>'."\n".
+		 '</end>'."\n".
+		 '</finders>'."\n"		 
+		  , FILE_APPEND);
+		  $i++; }
+		  while ($i<=$pages);
+		  
+		   echo file_put_contents ('test_'.$group.'.txt', '</entry>'."\n", FILE_APPEND);
+		  ?>				
 			
 			<fieldset class="row1">
                 <legend>Travel Information</legend>
+				<p>
+				<?php echo $pages ?>
+				</p>
 				<p>
                     <label>BUS Name 
                     </label>

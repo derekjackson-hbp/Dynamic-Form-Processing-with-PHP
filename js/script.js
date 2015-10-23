@@ -9,10 +9,11 @@
  * http://techstream.org
  */
 
+
 function addRow(tableID) {
 	var table = document.getElementById(tableID);
 	var rowCount = table.rows.length;
-	if(rowCount < 30){							// limit the user from creating fields more than your limits
+	if(rowCount < 50){							// limit the user from creating fields more than your limits
 		var row = table.insertRow(rowCount);
 		var colCount = table.rows[0].cells.length;
 		for(var i=0; i<colCount; i++) {
@@ -20,7 +21,7 @@ function addRow(tableID) {
 			newcell.innerHTML = table.rows[0].cells[i].innerHTML;
 		}
 	}else{
-		 alert("Maximum Passenger per ticket is 30.");
+		 alert("Maximum Passenger per ticket is 50.");
 			   
 	}
 }
