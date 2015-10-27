@@ -1,19 +1,11 @@
-/**
- * Projet Name : Dynamic Form Processing with PHP
- * URL: http://techstream.org/Web-Development/PHP/Dynamic-Form-Processing-with-PHP
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- * 
- * Copyright 2013, Tech Stream
- * http://techstream.org
- */
+
+$r=0
 
 
-
+<script>
 function addterm(tableID) {
    
-   
+    var r= r + 1;
 	var table = document.getElementById(tableID);
 	var rowCount = table.rows.length;
 								
@@ -63,3 +55,4 @@ function deleteRow(tableID) {
 		}
 	}
 }
+</script>
