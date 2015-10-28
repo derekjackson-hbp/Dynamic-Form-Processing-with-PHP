@@ -20,6 +20,7 @@
         		
         			<tbody>
         				<tr>
+        					<td><p id="rowC">1</p></td>
         					<td>
         	<fieldset class="row1">
         		
@@ -51,8 +52,8 @@
         					<fieldset>
 				<legend>page and location</legend>
         						<input type="button" value="Add Location" onClick="addRow('dataTable')" /> 
-        						<input type="button" value="Remove Location" onClick="deleteRow('dataTable')"  /> 
-        						<p>(All actions apply only to entries with check marked check boxes only.)</p></td>	
+        						<input type="button" value="Remove Location" onClick="deleteRow('dataTable')"/> 
+        						<p>(All actions apply only to entries with check marked check boxes only.)</p>	
 					
 				
         					</fieldset>
@@ -63,7 +64,8 @@
                   <tbody>
                     <tr>
                       
-						<td><input type="checkbox" required="required" name="chk[]" checked="checked" /></td>
+						<td>
+							<input type="checkbox" required="required" name="chk[]" checked="checked" /></td>
 						<td>
 							<label>Start Page</label>
 							<input type="text" required="required" name="BX_NAME[]"/>

@@ -16,14 +16,20 @@ function addterm(tableID) {
    
 	var table = document.getElementById(tableID);
 	var rowCount = table.rows.length;
-								
+					var counting = rowCount;
+					counting++;
 		var row = table.insertRow(rowCount);
 		var colCount = table.rows[0].cells.length;
-		for(var i=0; i<colCount; i++) {
+		var newcell = row.insertCell(0);
+		newcell.innerHTML = rowCount + 1;
+		for(var i=1; i<(colCount-1); i++) {
 			var newcell = row.insertCell(i);
 			newcell.innerHTML = table.rows[0].cells[i].innerHTML;
-		document.getElementById("rowC").innerHTML = i;
         		}
+        	var locate = document.getElementByID(datatab
+        		
+        	var newcell = row.insertCell(3);
+        	newcell.innerHTML =
 	
 			   
 	}
@@ -31,14 +37,15 @@ function addterm(tableID) {
 
 function addRow(tableID) {
 
-	var table = document.getElementById(tableID);
+	var table = document.getElementById(tableID)
+	var place = document.getElementbyId(rowC)
 	var rowCount = table.rows.length;
 	if(rowCount < 50){							// limit the user from creating fields more than your limits
 		var row = table.insertRow(rowCount);
 		var colCount = table.rows[0].cells.length;
 		for(var i=0; i<colCount; i++) {
 			var newcell = row.insertCell(i);
-			newcell.innerHTML = table.rows[0].cells[i].innerHTML;
+			newcell.innerHTML = table.rows[0].cells[i].innerHTML + place;
 		}
 	}else{
 		 alert("Maximum Passenger per ticket is 50.");
