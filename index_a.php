@@ -59,7 +59,7 @@
         					</fieldset>
        	</td>
         		<td>
-        <fieldset>
+      <fieldset>
        		<table id="dataTable" class="form" border="1">
                   <tbody>
                     <tr>
@@ -95,7 +95,7 @@
             </table>
         	<p>
         		<input type="button" value="Add term" onClick="addterm('terms')" /> 
-        		<input type="button" value="Remove term" onClick="deleteRow('terms')"  /> 
+        		<input type="button" value="Remove term" onClick="deleteterm('terms')"  /> 
         	</p>
        
             <fieldset class="row4">
