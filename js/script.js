@@ -37,11 +37,11 @@ function addterm(tableID) {
         	
         	var str1 = '<fieldset><table id="dataTable';
         	var str2 = counting;
-        	var str3 = '" class="form" border="1"><tbody><tr><td><input type="checkbox" required="required" name="chk[]" checked="checked" /></td><td><label>Start Page</label><input type="text" required="required" name="BX_NAME[]"/></td><td><label for="BX_age">Start Paragraph</label><input type="text" required="required" name="BX_age[]"/></td><td><label for="BX_gender">End Page</label><input id="BX_gender" name="BX_gender[]" required="required" type="text"></input></td><td><label for="BX_birth">End Paragraph</label><input id="BX_birth" name="BX_birth[]" required="required" type="text"></input></td></tr></tbody></table></fieldset>';
+        	var str3 = '" class="form" border="1"><tbody><tr><td><input type="checkbox" required="required" name="chk[]" checked="checked" /></td><td><label>Start Page</label><input type="text" required="required" name="BX_startpg[]"/></td><td><label for="BX_startloc">Start Paragraph</label><input type="text" required="required" name="BX_startloc[]"/></td><td><label for="BX_endpg">End Page</label><input id="BX_endpg" name="BX_endpg[]" required="required" type="text"></input></td><td><label for="BX_endloc">End Paragraph</label><input id="BX_endloc" name="BX_endloc[]" required="required" type="text"></input></td></tr></tbody></table></fieldset>';
         	var all= str1.concat(str2,str3);
         	var newcell = row.insertCell(3);
         	newcell.innerHTML = all; 
-        	//newcell.innerHTML = '<fieldset><table id="dataTable'+counting'" class="form" border="1"><tbody><tr><td><input type="checkbox" required="required" name="chk[]" checked="checked" /></td><td><label>Start Page</label><input type="text" required="required" name="BX_NAME[]"/></td><td><label for="BX_age">Start Paragraph</label><input type="text" required="required" name="BX_age[]"/></td><td><label for="BX_gender">End Page</label><input id="BX_gender" name="BX_gender[]" required="required" type="text"></input></td><td><label for="BX_birth">End Paragraph</label><input id="BX_birth" name="BX_birth[]" required="required" type="text"></input></td></tr></tbody></table></fieldset>';
+        	//newcell.innerHTML = '<fieldset><table id="dataTable'+counting'" class="form" border="1"><tbody><tr><td><input type="checkbox" required="required" name="chk[]" checked="checked" /></td><td><label>Start Page</label><input type="text" required="required" name="BX_startpg[]"/></td><td><label for="BX_startloc">Start Paragraph</label><input type="text" required="required" name="BX_startloc[]"/></td><td><label for="BX_endpg">End Page</label><input id="BX_endpg" name="BX_endpg[]" required="required" type="text"></input></td><td><label for="BX_endloc">End Paragraph</label><input id="BX_endloc" name="BX_endloc[]" required="required" type="text"></input></td></tr></tbody></table></fieldset>';
 	}
 			   
 	
@@ -50,7 +50,7 @@ function removeTerm(tableID) {
 var table = document.getElementById(tableID);
 var rowCount = table.rows.length;
 var entry = 0;
-var entry = prompt("which entry?","1-"+rowCount);
+var entry = prompt("which entry?");
 if (entry != 0 && entry<=rowCount) {
     var i = entry - 1;
     table.deleteRow(i);

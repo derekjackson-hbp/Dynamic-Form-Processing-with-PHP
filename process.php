@@ -15,19 +15,19 @@
 				$month = $_POST['month'];
 				$mob = $_POST['mob'];
 				$type = $_POST['type'];
-				$from = $_POST['from'];
+				$term = $_POST['term'];
 				$to=$_POST['to'];
 				$root=$_POST['root'];
-				$BX_NAME=$_POST['BX_NAME'];
-				$BX_age=$_POST['BX_age'];			
-				$BX_gender=$_POST['BX_gender'];
-				$BX_birth=$_POST['BX_birth'];	
+				$BX_startpg=$_POST['BX_startpg'];
+				$BX_startloc=$_POST['BX_startloc'];			
+				$BX_endpg=$_POST['BX_endpg'];
+				$BX_endloc=$_POST['BX_endloc'];	
 				$group=$_POST['group'];
-				$pages = count($BX_NAME);
+				$pages = count($BX_startpg);
 				
 				
 		 echo file_put_contents ( 'test_'.$group.'.txt', "\n".'<entry>'."\n".
-		 '<term>'.$from.'</term>'."\n".
+		 '<term>'.$term.'</term>'."\n".
 		 '<finders>'."\n", FILE_APPEND); 
 		 
 		 $i = 0;
@@ -36,12 +36,12 @@
 		 
 		 echo file_put_contents ('test_'.$group.'.txt', 
 		 '<start>'."\n".
-		 '<paragraph>'.$BX_age[$i].'</paragraph>'."\n".
-		 '<page>'.$BX_NAME[$i].'</page>'."\n".
+		 '<paragraph>'.$BX_startloc[$i].'</paragraph>'."\n".
+		 '<page>'.$BX_startpg[$i].'</page>'."\n".
 		 '</start>'."\n".
 		 '<end>'."\n".
-		 '<paragraph>'.$BX_birth[$i].'</paragraph>'."\n".
-		 '<page>'.$BX_gender[$i].'</page>'."\n".
+		 '<paragraph>'.$BX_endloc[$i].'</paragraph>'."\n".
+		 '<page>'.$BX_endpg[$i].'</page>'."\n".
 		 '</end>'."\n".
 		 '</finders>'."\n"		 
 		  , FILE_APPEND);
@@ -71,9 +71,9 @@
 					
                 </p>
                 <p>
-					<label>Boarding From
+					<label>Entry Term
                     </label>
-                    <input name="from" type="text" readonly="readonly" value="<?php echo $from ?>"/>
+                    <input name="term" type="text" readonly="readonly" value="<?php echo $term ?>"/>
 					<label>To
                     </label>
 					<input name="to" type="text" readonly="readonly" value="<?php echo $to ?>"/>
@@ -100,7 +100,7 @@
                 </legend>				
                 <table id="dataTable" class="form" border="1">
 					<tbody>
-					<?php foreach($BX_NAME as $a => $b){ ?>
+					<?php foreach($BX_startpg as $a => $b){ ?>
 						<tr>
 							<p>
 								<td >
@@ -108,19 +108,19 @@
 								</td>
 								<td>
 									<label>Name</label>
-									<input type="text" readonly="readonly" name="BX_NAME[$a]" value="<?php echo $BX_NAME[$a]; ?>">
+									<input type="text" readonly="readonly" name="BX_startpg[$a]" value="<?php echo $BX_startpg[$a]; ?>">
 								</td>
 								<td>
-									<label for="BX_age">Age</label>
-									<input type="text" readonly="readonly" class="small"  name="BX_age[]" value="<?php echo $BX_age[$a]; ?>">
+									<label for="BX_startloc">Age</label>
+									<input type="text" readonly="readonly" class="small"  name="BX_startloc[]" value="<?php echo $BX_startloc[$a]; ?>">
 								</td>
 								<td>
-									<label for="BX_gender">Gender</label>
-									<input type="text" readonly="readonly" name="BX_gender[]" value="<?php echo $BX_gender[$a]; ?>">
+									<label for="BX_endpg">Gender</label>
+									<input type="text" readonly="readonly" name="BX_endpg[]" value="<?php echo $BX_endpg[$a]; ?>">
 								</td>
 								<td>
-									<label for="BX_birth">Berth Pre</label>
-									<input type="text" readonly="readonly" name="BX_birth[]" value="<?php echo $BX_birth[$a]; ?>">
+									<label for="BX_endloc">Berth Pre</label>
+									<input type="text" readonly="readonly" name="BX_endloc[]" value="<?php echo $BX_endloc[$a]; ?>">
 								</td>
 							</p>
 						</tr>

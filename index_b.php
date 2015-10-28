@@ -10,9 +10,9 @@
         <form action="process.php" class="register" method="POST">
             <h1>Index</h1>
 			<fieldset class="row1">
-                <legend>Index Group A</legend>
+                <legend>Index Group B</legend>
 			    <select name="group">
-			        <option selected="selected">A</option>
+			        <option selected="selected">B</option>
 			    </select>
 			</fieldset>
         	<table id="terms" class="form">
