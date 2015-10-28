@@ -51,7 +51,7 @@
         					<td>
         					<fieldset>
 				<legend>page and location</legend>
-        						<input type="button" value="Add Location" onClick="addRow('dataTable')" /> 
+        						<input type="button" id="loc1" value="Add Location" onClick="addRow('dataTable')" /> 
         						<input type="button" value="Remove Location" onClick="deleteRow('dataTable')"/> 
         						<p>(All actions apply only to entries with check marked check boxes only.)</p>	
 					
@@ -60,32 +60,7 @@
        	</td>
         		<td>
       <fieldset>
-       		<table id="dataTable" class="form" border="1">
-                  <tbody>
-                    <tr>
-                      
-						<td>
-							<input type="checkbox" required="required" name="chk[]" checked="checked" /></td>
-						<td>
-							<label>Start Page</label>
-							<input type="text" required="required" name="BX_NAME[]"/>
-						 </td>
-						 <td>
-							<label for="BX_age">Start Paragraph</label>
-							<input type="text" required="required" name="BX_age[]"/>
-					     </td>
-						 <td>
-							<label for="BX_gender">End Page</label>
-							<input id="BX_gender" name="BX_gender[]" required="required" type="text"></input>
-						 </td>
-						 <td>
-							<label for="BX_birth">End Paragraph</label>
-						     <input id="BX_birth" name="BX_birth[]" required="required" type="text"></input>
-						 </td>
-                    	
-                    </tr>
-                    </tbody>
-                </table>
+       		<table id="dataTable" class="form" border="1"><tbody><tr><td><input type="checkbox" required="required" name="chk[]" checked="checked" /></td><td><label>Start Page</label><input type="text" required="required" name="BX_NAME[]"/></td><td><label for="BX_age">Start Paragraph</label><input type="text" required="required" name="BX_age[]"/></td><td><label for="BX_gender">End Page</label><input id="BX_gender" name="BX_gender[]" required="required" type="text"></input></td><td><label for="BX_birth">End Paragraph</label><input id="BX_birth" name="BX_birth[]" required="required" type="text"></input></td></tr></tbody></table>
         </fieldset>
         		
 				<div class="clear"></div>
@@ -93,10 +68,12 @@
        </tr>
         			</tbody>
             </table>
+            <fieldset>
         	<p>
         		<input type="button" value="Add term" onClick="addterm('terms')" /> 
-        		<input type="button" value="Remove term" onClick="deleteterm('terms')"  /> 
+        		<input type="button" value="Remove term" onClick="removeTerm('terms')"  /> 
         	</p>
+        	</fieldset>
        
             <fieldset class="row4">
                 <legend>Submitting</legend>

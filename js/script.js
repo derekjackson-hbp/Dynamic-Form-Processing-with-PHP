@@ -45,23 +45,20 @@ function addterm(tableID) {
 	}
 			   
 	
-	  /*	
-function deleteRow(tableID) {
+	 	
+function removeTerm(tableID) {
+var table = document.getElementById(tableID);
+var rowCount = table.rows.length;
+var entry = 0;
+var entry = prompt("which entry?","1-"+rowCount);
+if (entry != 0 && entry<=rowCount) {
+    var i = entry - 1;
+    table.deleteRow(i);
+}else{
+    alert ("Not a valid entry");
+}
 
-	var table = document.getElementById(tableID);
-	var rowCount = table.rows.length;
-	for(var i=0; i<rowCount; i++) {
-		var row = table.rows[i];
-		var chkbox = row.cells[0].childNodes[0];
-		if(null != chkbox && true == chkbox.checked) {
-			if(rowCount <= 1) { 						// limit the user from removing all the fields
-				alert("Cannot Remove all the Passenger.");
-				break;
-			}
-			table.deleteRow(i);
-			rowCount--;
-			i--;
-		}*/
+		}
 
 function addRow(tableID) {
 
@@ -79,28 +76,25 @@ function addRow(tableID) {
 			   
 	}
 }
-		
 
-		
-	
+
 function deleteRow(tableID) {
 	var table = document.getElementById(tableID);
 	var rowCount = table.rows.length;
 	for(var i=0; i<rowCount; i++) {
 		var row = table.rows[i];
 		var chkbox = row.cells[0].childNodes[0];
-		if(null != chkbox && true == chkbox.checked);{
+		if(null != chkbox && true == chkbox.checked) {
 			if(rowCount <= 1) { 						// limit the user from removing all the fields
 				alert("Cannot Remove all the Passenger.");
-				break;}
+				break;
+			}
 			table.deleteRow(i);
 			rowCount--;
 			i--;
 		}
 	}
 }
-
-
 
 
 
