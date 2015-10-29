@@ -26,7 +26,7 @@
         		
         		<p><label>Index Term
         		</label></p>
-        		<input name="term" required="required" type="text"/>
+        		<input name="term[]" required="required" type="text"/>
         		<p id="rowC"></p>
         		
                 <p>

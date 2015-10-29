@@ -23,11 +23,11 @@
 				$BX_endpg=$_POST['BX_endpg'];
 				$BX_endloc=$_POST['BX_endloc'];	
 				$group=$_POST['group'];
-				$pages = count($BX_startpg);
+				$entries = count($term);
 				
 				
 		 echo file_put_contents ( 'test_'.$group.'.txt', "\n".'<entry>'."\n".
-		 '<term>'.$term.'</term>'."\n".
+		 '<term>'.$term[$x].'</term>'."\n".
 		 '<finders>'."\n", FILE_APPEND); 
 		 
 		 $i = 0;
@@ -46,57 +46,36 @@
 		 '</finders>'."\n"		 
 		  , FILE_APPEND);
 		  $i++; }
-		  while ($i<=$pages);
+		  while ($i<=$entries);
 		  
 		   echo file_put_contents ('test_'.$group.'.txt', '</entry>'."\n", FILE_APPEND);
 		  ?>				
 			
 			<fieldset class="row1">
-                <legend>Travel Information</legend>
+                <legend>INDEX</legend>
 				<p>
-				<?php echo $pages ?>
+				<?php echo $entries ?>
 				</p>
 				<p>
-                    <label>BUS Name 
+                    <label>GROUP
                     </label>
                     <input name="bus" type="text" readonly="readonly" value="<?php echo $group ?>"/>
-                    <label>Date of journey
-                    </label>
-					<input type="text" readonly="readonly" class="small" value="<?php echo $day ?>"/>
-					<input type="text" readonly="readonly" class="small" value="<?php echo $month ?>"/>
-					<input type="text" readonly="readonly" class="small" value="2013"/>
-					<label>Bus Type  
-                    </label>
-                    <input  type="text" readonly="readonly" value="<?php echo $type ?>"/>
 					
                 </p>
+                </fieldset>
+                <fieldset>
+                <?php foreach($term as $x) { ?>
                 <p>
 					<label>Entry Term
                     </label>
-                    <input name="term" type="text" readonly="readonly" value="<?php echo $term ?>"/>
-					<label>To
-                    </label>
-					<input name="to" type="text" readonly="readonly" value="<?php echo $to ?>"/>
-					<label>Via (Root)
-                    </label>
-					<input  type="text" readonly="readonly" value="<?php echo $root ?>"/>
+                    <input name="term" type="text" readonly="readonly" value="<?php echo $x ?>"/>
 					 
                 </p>
-                <p>
-                    <label>Mobile
-                    </label>
-                    <input name="mob" type="text" readonly="readonly" value="<?php echo $mob ?>"/>
-                    <label >(You will receive 
-                    </label><label >the ticket in this )
-                    </label>
-					
-					
-                </p>
-				
 				<div class="clear"></div>
-            </fieldset>
+         
+            
             <fieldset class="row2">
-                <legend>Passenger Details
+                <legend>Locations
                 </legend>				
                 <table id="dataTable" class="form" border="1">
 					<tbody>
@@ -107,37 +86,32 @@
 									<?php echo $a+1; ?>
 								</td>
 								<td>
-									<label>Name</label>
+									<label>Start Page</label>
 									<input type="text" readonly="readonly" name="BX_startpg[$a]" value="<?php echo $BX_startpg[$a]; ?>">
 								</td>
 								<td>
-									<label for="BX_startloc">Age</label>
+									<label for="BX_startloc">Start Location</label>
 									<input type="text" readonly="readonly" class="small"  name="BX_startloc[]" value="<?php echo $BX_startloc[$a]; ?>">
 								</td>
 								<td>
-									<label for="BX_endpg">Gender</label>
+									<label for="BX_endpg">End Page</label>
 									<input type="text" readonly="readonly" name="BX_endpg[]" value="<?php echo $BX_endpg[$a]; ?>">
 								</td>
 								<td>
-									<label for="BX_endloc">Berth Pre</label>
+									<label for="BX_endloc">End Location</label>
 									<input type="text" readonly="readonly" name="BX_endloc[]" value="<?php echo $BX_endloc[$a]; ?>">
 								</td>
 							</p>
 						</tr>
 					<?php } ?>
+					
 					</tbody>
                 </table>
 				<div class="clear"></div>
             </fieldset>
-            <fieldset class="row3">
-                <legend>Further Information</legend>                  
-                    <p>The identification details are required during journey. One of the passenger booked on the ticket should have any of the identity cards ( Passport / PAN Card / Driving License / Photo ID card issued by Central / State Govt / Student Identity Card with photograph) during the journey in original. </p>
-				<div class="clear"></div>
-            </fieldset>
-            <fieldset class="row5">
-                <legend>Terms and Mailing</legend>
+            <?php } ?>
+           </fieldset>
                 <p>
-					<input class="submit" type="button" value="Make Payment &raquo;" />
 					<a target="blank" class="submit" href=<?php echo '"test_'.$group.'.txt" type="button">' ?> review .txt XML <a/>
 					<a class="submit" href=<?php echo '"index_'.$group.'.html" type="button">'?>next Term</a>
                 </p>
