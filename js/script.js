@@ -20,17 +20,27 @@ function addterm(tableID) {
 					counting++;
 		var row = table.insertRow(rowCount);
 		var colCount = table.rows[0].cells.length;
+		
+		var str10 = '<select name="row"><option selected="selected">';
+		var str11 = counting;
+		var str12 = '</option></select>';
+		var str13 = str10.concat(str11,str12);
 		var newcell = row.insertCell(0);
-		newcell.innerHTML = rowCount + 1;
-		//for(var i=1; i<(colCount-2); i++) {
-			var newcell = row.insertCell(1);
-			newcell.innerHTML = table.rows[0].cells[1].innerHTML;
+		newcell.innerHTML = str13;
+		
+			
+        var astr = '<p><label>Index Term</label></p><input name="term';
+		var	bstr = counting; 
+		var cstr ='" required="required" type="text"/><p id="rowC"></p>';
+		var gstr = astr.concat(bstr,cstr);
+		var newcell = row.insertCell(1);
+			newcell.innerHTML = gstr; 
         	
         	var stra = '<fieldset><legend>page and location</legend><input type="button" value="Add Location" onClick="addRow(\'dataTable';
         	var strb = counting;
         	var strc = '\')"/><input type="button" value="Remove Location" onClick="deleteRow(\'dataTable';
         	var strd = '\')"/><p>(All actions apply only to entries with check marked check boxes only.)</p></fieldset>';
-        	var strg = stra.concat(strb,strc,strb,strd)
+        	var strg = stra.concat(strb,strc,strb,strd);
         	var newcell = row.insertCell(2);
 			newcell.innerHTML = strg;
         	

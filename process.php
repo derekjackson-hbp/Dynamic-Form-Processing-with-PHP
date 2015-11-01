@@ -23,7 +23,11 @@
 				$BX_endpg=$_POST['BX_endpg'];
 				$BX_endloc=$_POST['BX_endloc'];	
 				$group=$_POST['group'];
+				$amount=$_POST['row'];
 				$entries = count($term);
+				
+			
+			
 				
 				
 		 echo file_put_contents ( 'test_'.$group.'.txt', "\n".'<entry>'."\n".
@@ -51,7 +55,10 @@
 		   echo file_put_contents ('test_'.$group.'.txt', '</entry>'."\n", FILE_APPEND);
 		  ?>				
 			
+			
+			
 			<fieldset class="row1">
+			<pre><?php print_r ($amount)?></pre>
                 <legend>INDEX</legend>
 				<p>
 				<?php echo $entries ?>
