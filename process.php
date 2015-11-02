@@ -10,28 +10,29 @@
             <h1>YouAreBUS Ticket Reservation</h1>
 			<?php if(isset($_POST)==true && empty($_POST)==false): 
 				$chkbox = $_POST['chk'];
-				$bus = $_POST['bus'];
-				$day = $_POST['day'];
-				$month = $_POST['month'];
-				$mob = $_POST['mob'];
-				$type = $_POST['type'];
-				$term = $_POST['term'];
-				$to=$_POST['to'];
-				$root=$_POST['root'];
 				$BX_startpg=$_POST['BX_startpg'];
 				$BX_startloc=$_POST['BX_startloc'];			
 				$BX_endpg=$_POST['BX_endpg'];
 				$BX_endloc=$_POST['BX_endloc'];	
 				$group=$_POST['group'];
 				$amount=$_POST['row'];
-				$entries = count($term);
 				
+				
+		/*	for ($i=1, $i<3, $i++) {
+			 $ {term{$i} = $_POST['term'.$i];
+			 };
+			 
+			 echo '<p>';
+			 echo $term1;
+			
+			 echo '</p>'; 
+
 			
 			
 				
 				
 		 echo file_put_contents ( 'test_'.$group.'.txt', "\n".'<entry>'."\n".
-		 '<term>'.$term[$x].'</term>'."\n".
+		 '<term>'.$term1.'</term>'."\n".
 		 '<finders>'."\n", FILE_APPEND); 
 		 
 		 $i = 0;
@@ -40,22 +41,22 @@
 		 
 		 echo file_put_contents ('test_'.$group.'.txt', 
 		 '<start>'."\n".
-		 '<paragraph>'.$BX_startloc[$i].'</paragraph>'."\n".
+		 '<paragraph>'.$BX_startloc.'</paragraph>'."\n".
 		 '<page>'.$BX_startpg[$i].'</page>'."\n".
 		 '</start>'."\n".
 		 '<end>'."\n".
-		 '<paragraph>'.$BX_endloc[$i].'</paragraph>'."\n".
-		 '<page>'.$BX_endpg[$i].'</page>'."\n".
+		 '<paragraph>'.$BX_endloc.'</paragraph>'."\n".
+		 '<page>'.$BX_endpg.'</page>'."\n".
 		 '</end>'."\n".
 		 '</finders>'."\n"		 
 		  , FILE_APPEND);
 		  $i++; }
 		  while ($i<=$entries);
 		  
-		   echo file_put_contents ('test_'.$group.'.txt', '</entry>'."\n", FILE_APPEND);
+		   echo file_put_contents ('test_'.$group.'.txt', '</entry>'."\n", FILE_APPEND);*/
 		  ?>				
 			
-			
+	<!--		
 			
 			<fieldset class="row1">
 			<pre><?php print_r ($amount)?></pre>
@@ -70,12 +71,19 @@
 					
                 </p>
                 </fieldset>
-                <fieldset>
-                <?php foreach($term as $x) { ?>
-                <p>
+                <fieldset> -->
+                <?php 
+                
+                echo '<p>'
+                echo $term1;
+                echo $term2;
+                echo '</p>'
+                
+                 ?>
+               <!-- <p>
 					<label>Entry Term
                     </label>
-                    <input name="term" type="text" readonly="readonly" value="<?php echo $x ?>"/>
+                    <input name="term" type="text" readonly="readonly" value="<?php echo $term1 ?>"/>
 					 
                 </p>
 				<div class="clear"></div>
@@ -133,8 +141,8 @@
 		
 		
 			<div class="clear"></div>
-        </form>
-    </body>
+        </form>-->
+    </body> 
 	<!-- Start of StatCounter Code for Default Guide -->
 <script type="text/javascript">
 var sc_project=9046834; 

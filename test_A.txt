@@ -538,3 +538,17 @@
 </end>
 </finders>
 </entry>
+
+<entry>
+<term></term>
+<finders>
+<start>
+<paragraph>d</paragraph>
+<page>1</page>
+</start>
+<end>
+<paragraph>r</paragraph>
+<page></page>
+</end>
+</finders>
+</entry>

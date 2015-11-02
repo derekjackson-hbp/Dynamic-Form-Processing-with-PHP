@@ -20,7 +20,10 @@
         		
         			<tbody>
         				<tr>
-        					<td><p id="rowC">1</p></td>
+        					<td><p id="rowC">
+        					</label></p>entry No.<br />
+        		<input name="entry1" required="required" value="1" style="width:14px"/>
+        					</p></td>
         					<td>
         	<fieldset class="row1">
         		
