@@ -21,8 +21,8 @@
         			<tbody>
         				<tr>
         					<td><p id="rowC">
-        					</label></p>entry No.<br />
-        		<input name="entry1" required="required" value="1" style="width:14px"/>
+        					</p>entry No.<br />
+        		<input name="row[]" required="required" value="1" style="width:14px"/>
         					</p></td>
         					<td>
         	<fieldset class="row1">
@@ -63,7 +63,7 @@
        	</td>
         		<td>
       <fieldset>
-       		<table id="dataTable" class="form" border="1"><tbody><tr><td><input type="checkbox" required="required" name="chk[]" checked="checked" /></td><td><label>Start Page</label><input type="text" required="required" name="BX_startpg[]"/></td><td><label for="BX_startloc">Start Paragraph</label><input type="text" required="required" name="BX_startloc[]"/></td><td><label for="BX_endpg">End Page</label><input id="BX_endpg" name="BX_gender[]" required="required" type="text"></input></td><td><label for="BX_endloc">End Paragraph</label><input id="BX_endloc" name="BX_endloc[]" required="required" type="text"></input></td></tr></tbody></table>
+       		<table id="dataTable" class="form" border="1"><tbody><tr><td><input type="checkbox" required="required" name="chk[]" checked="checked" /></td><td><label>Start Page</label><input type="text" required="required" name="BX_startpg1[]"/></td><td><label for="BX_startloc1">Start Paragraph</label><input type="text" required="required" name="BX_startloc1[]"/></td><td><label for="BX_endpg1">End Page</label><input id="BX_endpg1" name="BX_endpg1[]" required="required" type="text"></input></td><td><label for="BX_endloc1">End Paragraph</label><input id="BX_endloc1" name="BX_endloc1[]" required="required" type="text"></input></td></tr></tbody></table>
         </fieldset>
         		
 				<div class="clear"></div>

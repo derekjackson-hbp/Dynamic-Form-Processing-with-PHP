@@ -21,12 +21,9 @@ function addterm(tableID) {
 		var row = table.insertRow(rowCount);
 		var colCount = table.rows[0].cells.length;
 		
-		var str10 = '<select name="row"><option selected="selected">';
-		var str11 = counting;
-		var str12 = '</option></select>';
-		var str13 = str10.concat(str11,str12);
+		var str10 = '</label></p>entry No.<br /><input name="row[]" required="required" value="'+counting+'" style="width:14px"/>';
 		var newcell = row.insertCell(0);
-		newcell.innerHTML = str13;
+		newcell.innerHTML = str10;
 		
 			
         var astr = '<p><label>Index Term</label></p><input name="term';
@@ -47,7 +44,7 @@ function addterm(tableID) {
         	
         	var str1 = '<fieldset><table id="dataTable';
         	var str2 = counting;
-        	var str3 = '" class="form" border="1"><tbody><tr><td><input type="checkbox" required="required" name="chk[]" checked="checked" /></td><td><label>Start Page</label><input type="text" required="required" name="'+counting+'BX_startpg[]"/></td><td><label for="'+counting+'BX_startloc">Start Paragraph</label><input type="text" required="required" name="'+counting+'BX_startloc[]"/></td><td><label for="'+counting+'BX_endpg">End Page</label><input id="'+counting+'BX_endpg" name="'+counting+'BX_endpg[]" required="required" type="text"></input></td><td><label for="'+counting+'BX_endloc">End Paragraph</label><input id="'+counting+'BX_endloc" name="'+counting+'BX_endloc[]" required="required" type="text"></input></td></tr></tbody></table></fieldset>';
+        	var str3 = '" class="form" border="1"><tbody><tr><td><input type="checkbox" required="required" name="chk[]" checked="checked" /></td><td><label>Start Page</label><input type="text" required="required" name="BX_startpg'+counting+'[]"/></td><td><label for="BX_startloc'+counting+'">Start Paragraph</label><input type="text" required="required" name="BX_startloc'+counting+'[]"/></td><td><label for="BX_endpg'+counting+'">End Page</label><input id="BX_endpg'+counting+'" name="BX_endpg'+counting+'[]" required="required" type="text"></input></td><td><label for="BX_endloc'+counting+'">End Paragraph</label><input id="BX_endloc'+counting+'" name="BX_endloc'+counting+'[]" required="required" type="text"></input></td></tr></tbody></table></fieldset>';
         	var all= str1.concat(str2,str3);
         	var newcell = row.insertCell(3);
         	newcell.innerHTML = all; 
@@ -73,6 +70,20 @@ if (entry != 0 && entry<=rowCount) {
 function addRow(tableID) {
 
 	var table = document.getElementById(tableID);
+	var rowCount = table.rows.length;
+								
+		var row = table.insertRow(rowCount);
+		var colCount = table.rows[0].cells.length;
+		for(var i=0; i<colCount; i++) {
+			var newcell = row.insertCell(i);
+			newcell.innerHTML = table.rows[0].cells[i].innerHTML;
+		}
+	
+}
+
+	/*
+	 * OLD CODE
+	 var table = document.getElementById(tableID);
 	var rowCount = table.rows.length;
 					var i = rowCount;
 					i++;
@@ -117,8 +128,8 @@ function addRow(tableID) {
 		newcell.innerHTML = d5;
 
 			   
-	
-}
+	*/
+
 
 
 function deleteRow(tableID) {

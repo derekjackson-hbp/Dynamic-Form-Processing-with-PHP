@@ -31,14 +31,13 @@
 
 ?>
 
-<form method="post" action="write.php">
+
 <fieldset class="row1">
+
+<p> view text file </p>
 			
                 <legend>INDEX</legend>
                 <h2 class="group"><?php echo $group; ?></h2>
-                <p>
-                <?php echo '<input type="text" readonly="readonly" method="POST" name="'.$group.'" value="'.$group.'" />'?>
-                </p>
 				<p> Total Entries: 
 				<?php echo $total ?>
 				</p>
@@ -58,15 +57,9 @@
 				<tbody>
 				
 				<tr>
-				
 				<td class="term2">
-				<p><label>Index Term
-        		</label></p>
-        		<?php echo '<input name="term'.$x.'" readonly="readonly"  required="required" type="text" value="'.${"term{$x}"}.'" method="POST"/>'
-        		?>
-        		<p id="rowC"></p>
-        		
-                <p>
+								<?php echo $varx['term'];
+				                echo '<br />';	?>
 				</td>
 	           </tr>
 	           <tr>
@@ -82,36 +75,29 @@
 								<td></td>
 								<td>
 									
-									<?php echo '<input type="text" readonly="readonly" method="POST" name="BX_startpg'.$x.'[]" value="'.$vara[$a].'">'?>
+									<input type="text" readonly="readonly" name="$vara[$a]" value="<?php echo $vara[$a]; ?>">
 								</td>
 								<td>
 									
-									<input type="text" readonly="readonly" method="POST" class="small"  name="BX_startloc<?php echo $x; ?>[]" value="<?php echo $varb[$a]; ?>">
+									<input type="text" readonly="readonly" class="small"  name="$varb[$a]" value="<?php echo $varb[$a]; ?>">
 								</td>
 								<td>
 									
-									<input type="text" readonly="readonly" method="POST" name="BX_endpg<?php echo $x; ?>[]" value="<?php echo $varc[$a]; ?>">
+									<input type="text" readonly="readonly" name="$varc[$a]" value="<?php echo $varc[$a]; ?>">
 								</td>
 								<td>
 							
-									<input type="text" readonly="readonly" method="POST" name="BX_endloc<?php echo $x; ?>[]" value="<?php echo $vard[$a]; ?>">
+									<input type="text" readonly="readonly" name="$vard[$a]" value="<?php echo $vard[$a]; ?>">
 								</td>
 							</p>
 						</tr>
 					<?php } } ?>
 					</tbody>
 			
-				</table>
-				
+				</p>
 			</fieldset>
-			<div class="clear"></div>
-           <fieldset>
            
-        <label> Write this index to the file? </label>
-        <input type="submit" />
-        
-        
-    </fieldset>
-    </form>
+          
+    
     </body>
     </hmtl>
