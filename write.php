@@ -15,7 +15,7 @@
     </head>
     <body>
     <?php
-  
+    $word = $_POST['term1'];
     $group = $_POST['group'];
     $row = $_POST['row'];
     $total = count($row);
@@ -35,6 +35,7 @@
 <fieldset class="row1">
 
 <p> view text file </p>
+<p><?php echo $word; ?></p>
 			
                 <legend>INDEX</legend>
                 <h2 class="group"><?php echo $group; ?></h2>
@@ -56,14 +57,16 @@
 				<table>
 				<tbody>
 				
+				
 				<tr>
 				<td class="term2">
 								<?php echo $varx['term'];
 				                echo '<br />';	?>
+				                <input
 				</td>
 	           </tr>
 	           <tr>
-				<th></th>
+				<th><p><?php echo $term1;?></th>
 				<th>Start Page</th>
 				<th>Start Paragraph</th>
 				<th>End Page</th>

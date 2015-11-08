@@ -29,16 +29,50 @@
    
 }
 
-?>
+echo file_put_contents ( 'test_'.$group.'.txt', '<section group="'.$group.'">'."\n",FILE_APPEND);
+
+		for ($z=1; $z <= $total; $z++) {
+		
+		echo file_put_contents ( 'test_'.$group.'.txt', 
+		"\n".'<entry>'."\n".
+		 '<term>'.${"term{$z}"}.'</term>'."\n".
+		 '<finders>'."\n", FILE_APPEND);
+		 
+		        $va = (${"BX_startpg{$z}"});
+				$vb = (${"BX_startloc{$z}"});
+				$vc = (${"BX_endpg{$z}"});
+				$vd = (${"BX_endloc{$z}"});
+		 
+		 foreach ($va as $a => $b){
+		 
+		 echo file_put_contents ('test_'.$group.'.txt', 
+		 '<group>'."\n".'<start>'."\n".
+		 '<paragraph>'.$vb[$a].'</paragraph>'."\n".
+		 '<page>'. $va[$a].'</page>'."\n".
+		 '</start>'."\n".
+		 '<end>'."\n".
+		 '<paragraph>'.$vd[$a].'</paragraph>'."\n".
+		 '<page>'.$vc[$a].'</page>'."\n".
+		 '</end>'."\n".'</group>'."\n", 
+		 FILE_APPEND);
+		   }
+		
+		  
+		   echo file_put_contents ('test_'.$group.'.txt', '</finders>'."\n".'</entry>'."\n", FILE_APPEND); }
+		 
+		  echo file_put_contents ('test_'.$group.'.txt', '</section>'."\n", FILE_APPEND);
+		  ?>				
+		
+		}
+
+		 ?>
 
 <form method="post" action="write.php">
 <fieldset class="row1">
 			
                 <legend>INDEX</legend>
                 <h2 class="group"><?php echo $group; ?></h2>
-                <p>
-                <?php echo '<input type="text" readonly="readonly" method="POST" name="'.$group.'" value="'.$group.'" />'?>
-                </p>
+                
 				<p> Total Entries: 
 				<?php echo $total ?>
 				</p>
@@ -107,9 +141,10 @@
 			<div class="clear"></div>
            <fieldset>
            
+           
         <label> Write this index to the file? </label>
         <input type="submit" />
-        
+        <a target="blank" class="submit" href=<?php echo '"test_'.$group.'.txt" type="button">' ?> review .txt XML <a/>
         
     </fieldset>
     </form>
