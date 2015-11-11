@@ -1,6 +1,10 @@
-<section group="A">
+<?xml-stylesheet type="text/xsl" href="transform.xsl"?>
 
-<entry>
+
+<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="index.xsd">
+<indexGroup>
+    <entry>
 <term>Add</term>
 <finders>
 <group>
@@ -24,7 +28,8 @@
 </end>
 </group>
 </finders>
-</entry>
+    </entry>
+
 
 <entry>
 <term>Anvil</term>
@@ -77,4 +82,5 @@
 </group>
 </finders>
 </entry>
-</section>
+</indexGroup>
+</index>
