@@ -25,7 +25,7 @@
 	${"BX_startloc{$i}"} =$_POST['BX_startloc'.$i];			
 	${"BX_endpg{$i}"} = $_POST['BX_endpg'.$i];
 	${"BX_endloc{$i}"} = $_POST['BX_endloc'.$i];	
-	${"index{$i}"} = array ('term' => ${"term{$i}"}, 'startp' => ${"BX_startpg{$i}"}, 'startl' => ${"BX_startloc{$i}"}, 'endp' => ${"BX_endpg{$i}"}, 'endl' => ${"BX_endloc{$i}"});
+	${"index{$i}"} = array('term' => ${"term{$i}"}, 'startp' => ${"BX_startpg{$i}"}, 'startl' => ${"BX_startloc{$i}"}, 'endp' => ${"BX_endpg{$i}"}, 'endl' => ${"BX_endloc{$i}"});
    
 }
 
@@ -93,9 +93,7 @@ echo file_put_contents ( 'test_'.$group.'.xml', '<?xml-stylesheet type="text/xsl
 		  echo file_put_contents ('test_'.$group.'.xml', '</indexGroup>'."\n".'</index>', FILE_APPEND);
 		  ?>				
 		
-		}
-
-		 ?>
+		
 
 <form method="post" action="write.php">
 <fieldset class="row1">

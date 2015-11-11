@@ -7,7 +7,7 @@
 		<script type="text/javascript" src="../js/script.js"></script> 
     </head>
     <body>    
-        <form action="../process.php" class="register" method="POST">
+        <form action="../common/process.php" class="register" method="POST">
             <h1>Index</h1>
 			<fieldset class="row1">
                 <legend>Index Group A</legend>
