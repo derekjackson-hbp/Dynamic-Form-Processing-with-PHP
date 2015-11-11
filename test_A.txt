@@ -1,6 +1,4 @@
-<?xml-stylesheet type="text/xsl" href="transform.xsl"?>
-<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd">
-<indexGroup>
+<section group="A">
 
 <entry>
 <term>Add</term>
@@ -79,5 +77,4 @@
 </group>
 </finders>
 </entry>
-</indexGroup>
-</index>
+</section>
