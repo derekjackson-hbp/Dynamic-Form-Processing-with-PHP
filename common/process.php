@@ -29,11 +29,11 @@
    
 }
 
-echo file_put_contents ( 'test_'.$group.'.xml', '<?xml-stylesheet type="text/xsl" href="transform.xsl"?>'."\n".'<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd">'."\n".'<indexGroup>'."\n",FILE_APPEND);
+echo file_put_contents ( '../index/test.xml', '<?xml-stylesheet type="text/xsl" href="../common/transform.xsl"?>'."\n".'<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../common/index.xsd">'."\n".'<indexGroup>'."\n",FILE_APPEND);
 
 		for ($z=1; $z <= $total; $z++) {
 		
-		echo file_put_contents ( 'test_'.$group.'.xml', 
+		echo file_put_contents ( '../index/test.xml', 
 		"\n".'<entry>'."\n".
 		 '<term>'.${"term{$z}"}.'</term>'."\n".
 		 '<finders>'."\n", FILE_APPEND);
@@ -75,7 +75,7 @@ echo file_put_contents ( 'test_'.$group.'.xml', '<?xml-stylesheet type="text/xsl
 				      $hrefend = '';
 				      };
 		 
-		 echo file_put_contents ('test_'.$group.'.xml', 
+		 echo file_put_contents ('../index/test.xml', 
 		 '<group>'."\n".'<start>'."\n".
 		 '<paragraph>'.$hrefstrt.'</paragraph>'."\n".
 		 '<page>'. $va[$a].'</page>'."\n".
@@ -88,9 +88,9 @@ echo file_put_contents ( 'test_'.$group.'.xml', '<?xml-stylesheet type="text/xsl
 		   }
 		
 		  
-		   echo file_put_contents ('test_'.$group.'.xml', '</finders>'."\n".'</entry>'."\n", FILE_APPEND); }
+		   echo file_put_contents ('../index/test.xml', '</finders>'."\n".'</entry>'."\n", FILE_APPEND); }
 		 
-		  echo file_put_contents ('test_'.$group.'.xml', '</indexGroup>'."\n".'</index>', FILE_APPEND);
+		  echo file_put_contents ('../index/test.xml', '</indexGroup>'."\n".'</index>', FILE_APPEND);
 		  ?>				
 		
 		
@@ -204,10 +204,10 @@ echo file_put_contents ( 'test_'.$group.'.xml', '<?xml-stylesheet type="text/xsl
            <fieldset>
            
            
-        <label> Write this index to the file? </label>
-        <input type="submit" />
-        <a target="blank" class="submit" href=<?php echo '"test_'.$group.'.xml" type="button">' ?> review XML <a/>
-        
+        <!--<label> Write this index to the file? </label>
+        <input type="submit" />-->
+        <a target="blank" class="submit" href=<?php echo '"../index/test.xml" type="button">' ?> review XML <a/></br>
+        <a href="../index.html">Continue the Index</a>
     </fieldset>
     </form>
     </body>

@@ -6,7 +6,7 @@
 <xs:element name="index">
     <xs:complexType>
      <xs:sequence>
-         <xs:element name="indexGroup" type="grouping"/>
+         <xs:element name="indexGroup" type="grouping" minOccurs="1" maxOccurs="unbounded"/>
      </xs:sequence>
     </xs:complexType>
     

@@ -3,16 +3,16 @@
     <head>
         <title>Dynamic Form Processing with PHP | Tech Stream</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <link rel="stylesheet" type="text/css" href="css/default.css"/>
-		<script type="text/javascript" src="js/script.js"></script> 
+        <link rel="stylesheet" type="text/css" href="../css/default.css"/>
+		<script type="text/javascript" src="../js/script.js"></script> 
     </head>
     <body>    
-        <form action="process.php" class="register" method="POST">
+        <form action="../common/process2.php" class="register" method="POST">
             <h1>Index</h1>
 			<fieldset class="row1">
-                <legend>Index Group A</legend>
+                <legend>Index Group B</legend>
 			    <select name="group">
-			        <option selected="selected">A</option>
+			        <option selected="selected">b</option>
 			    </select>
 			</fieldset>
         	<table id="terms" class="form">
@@ -20,12 +20,16 @@
         		
         			<tbody>
         				<tr>
+        					<td><p id="rowC">
+        					</p>entry No.<br />
+        		<input name="row[]" required="required" value="1" style="width:14px"/>
+        					</p></td>
         					<td>
         	<fieldset class="row1">
         		
         		<p><label>Index Term
         		</label></p>
-        		<input name="from" required="required" type="text"/>
+        		<input name="term1" required="required" type="text"/>
         		<p id="rowC"></p>
         		
                 <p>
@@ -50,40 +54,16 @@
         					<td>
         					<fieldset>
 				<legend>page and location</legend>
-				 
-					<input type="button" value="Add Location" onClick="addRow('dataTable')" /> 
-					<input type="button" value="Remove Location" onClick="deleteRow('dataTable')"  /> 
-					<p>(All actions apply only to entries with check marked check boxes only.)</p>
+        						<input type="button" id="loc1" value="Add Location" onClick="addRow('dataTable')" /> 
+        						<input type="button" value="Remove Location" onClick="deleteRow('dataTable')"/> 
+        						<p>(All actions apply only to entries with check marked check boxes only.)</p>	
+					
 				
         					</fieldset>
        	</td>
         		<td>
-        <fieldset>
-       		<table id="dataTable" class="form" border="1">
-                  <tbody>
-                    <tr>
-                      
-						<td><input type="checkbox" required="required" name="chk[]" checked="checked" /></td>
-						<td>
-							<label>Start Page</label>
-							<input type="text" required="required" name="BX_NAME[]"/>
-						 </td>
-						 <td>
-							<label for="BX_age">Start Paragraph</label>
-							<input type="text" required="required" name="BX_age[]"/>
-					     </td>
-						 <td>
-							<label for="BX_gender">End Page</label>
-							<input id="BX_gender" name="BX_gender[]" required="required" type="text"></input>
-						 </td>
-						 <td>
-							<label for="BX_birth">End Paragraph</label>
-						     <input id="BX_birth" name="BX_birth[]" required="required" type="text"></input>
-						 </td>
-							
-                    </tr>
-                    </tbody>
-                </table>
+      <fieldset>
+       		<table id="dataTable" class="form" border="1"><tbody><tr><td><input type="checkbox" required="required" name="chk[]" checked="checked" /></td><td><label>Start Page</label><input type="text" required="required" name="BX_startpg1[]"/></td><td><label for="BX_startloc1">Start Paragraph</label><input type="text" required="required" name="BX_startloc1[]"/></td><td><label for="BX_endpg1">End Page</label><input id="BX_endpg1" name="BX_endpg1[]" required="required" type="text"></input></td><td><label for="BX_endloc1">End Paragraph</label><input id="BX_endloc1" name="BX_endloc1[]" required="required" type="text"></input></td></tr></tbody></table>
         </fieldset>
         		
 				<div class="clear"></div>
@@ -91,10 +71,12 @@
        </tr>
         			</tbody>
             </table>
+            <fieldset>
         	<p>
         		<input type="button" value="Add term" onClick="addterm('terms')" /> 
-        		<input type="button" value="Remove term" onClick="deleteRow('terms')"  /> 
+        		<input type="button" value="Remove term" onClick="removeTerm('terms')"  /> 
         	</p>
+        	</fieldset>
        
             <fieldset class="row4">
                 <legend>Submitting</legend>

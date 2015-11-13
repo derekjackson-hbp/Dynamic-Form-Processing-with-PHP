@@ -12,7 +12,7 @@
 			<fieldset class="row1">
                 <legend>Index Group A</legend>
 			    <select name="group">
-			        <option selected="selected">A</option>
+			        <option selected="selected">a</option>
 			    </select>
 			</fieldset>
         	<table id="terms" class="form">
