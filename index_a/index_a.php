@@ -13,6 +13,11 @@
                 <legend>Index Group A</legend>
 			    <select name="group">
 			        <option selected="selected">a</option>
+			    </select><br />
+			    <legend>Is this the first index group?</legend>
+			    <select name="first">
+			    <option selected="selected">no</option>
+			    <option>yes</option>
 			    </select>
 			</fieldset>
         	<table id="terms" class="form">
@@ -95,23 +100,7 @@
         </form>
 		
     </body>
-	<!-- Start of StatCounter Code for Default Guide -->
-<script type="text/javascript">
-var sc_project=9046834; 
-var sc_invisible=1; 
-var sc_security="ec55ba17"; 
-var scJsHost = (("https:" == document.location.protocol) ?
-"https://secure." : "http://www.");
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="free hit
-counter" href="http://statcounter.com/" target="_blank"><img
-class="statcounter"
-src="http://c.statcounter.com/9046834/0/ec55ba17/1/"
-alt="free hit counter"></a></div></noscript>
-<!-- End of StatCounter Code for Default Guide -->
+
 </html>
 
 

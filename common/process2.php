@@ -29,7 +29,13 @@
    
 }
 
-echo file_put_contents ( '../index/test.xml',"\n".'<indexGroup>'."\n",FILE_APPEND);
+    $fr = fopen('../index/test.xml', 'r+');
+    fseek($fr, -8, SEEK_END);
+    fwrite ($fr, "\n <indexGroup> \n");
+  
+    fclose($fr);
+
+//echo file_put_contents ( '../index/test.xml',"\n".'<indexGroup>'."\n",FILE_APPEND);
 
 		for ($z=1; $z <= $total; $z++) {
 		
@@ -90,7 +96,7 @@ echo file_put_contents ( '../index/test.xml',"\n".'<indexGroup>'."\n",FILE_APPEN
 		  
 		   echo file_put_contents ('../index/test.xml', '</finders>'."\n".'</entry>'."\n", FILE_APPEND); }
 		 
-		  echo file_put_contents ('../index/test.xml', '</indexGroup>'."\n", FILE_APPEND);
+		  echo file_put_contents ('../index/test.xml', '</indexGroup>'."\n".'</index>', FILE_APPEND);
 		  ?>				
 		
 		

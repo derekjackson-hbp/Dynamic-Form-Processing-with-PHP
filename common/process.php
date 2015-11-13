@@ -15,7 +15,7 @@
     </head>
     <body>
     <?php
-  
+    $first = $_POST['first'];
     $group = $_POST['group'];
     $row = $_POST['row'];
     $total = count($row);
@@ -29,7 +29,9 @@
    
 }
 
+if ($first == 'yes') {
 echo file_put_contents ( '../index/test.xml', '<?xml-stylesheet type="text/xsl" href="../common/transform.xsl"?>'."\n".'<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../common/index.xsd">'."\n".'<indexGroup>'."\n",FILE_APPEND);
+}
 
 		for ($z=1; $z <= $total; $z++) {
 		
@@ -206,7 +208,7 @@ echo file_put_contents ( '../index/test.xml', '<?xml-stylesheet type="text/xsl" 
            
         <!--<label> Write this index to the file? </label>
         <input type="submit" />-->
-        <a target="blank" class="submit" href=<?php echo '"../index/test.xml" type="button">' ?> review XML <a/></br>
+        <a href="../index/test.xml">review XML <a/></br>
         <a href="../index.html">Continue the Index</a>
     </fieldset>
     </form>
