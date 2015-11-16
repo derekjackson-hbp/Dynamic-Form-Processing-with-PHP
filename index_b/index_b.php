@@ -13,6 +13,11 @@
                 <legend>Index Group B</legend>
 			    <select name="group">
 			        <option selected="selected">b</option>
+			    </select><br />
+			    <legend>Is this the first index group?</legend>
+			    <select name="first">
+			    <option selected="selected">no</option>
+			    <option>yes</option>
 			    </select>
 			</fieldset>
         	<table id="terms" class="form">

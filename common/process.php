@@ -29,9 +29,9 @@
    
 }
 
-if ($first == 'yes') {
+
 echo file_put_contents ( '../index/test.xml', '<?xml-stylesheet type="text/xsl" href="../common/transform.xsl"?>'."\n".'<index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../common/index.xsd">'."\n".'<indexGroup>'."\n",FILE_APPEND);
-}
+
 
 		for ($z=1; $z <= $total; $z++) {
 		

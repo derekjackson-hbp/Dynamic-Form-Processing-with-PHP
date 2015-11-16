@@ -7,39 +7,17 @@
 		<script type="text/javascript" src="../js/script.js"></script> 
     </head>
     <body>    
-        <form action="../common/process.php" class="register" method="POST">
+        <form action="../common/process2.php" class="register" method="POST">
             <h1>Index</h1>
 			<fieldset class="row1">
-                <legend>First Index Group</legend>
-			    <select style="width:3em;" name="group">
-			        <option selected="selected"> a </option>
-			         <option style="margin-left:.5em;">b</option>
-			          <option>c</option>
-			           <option>d</option> 
-			          <option>e</option>
-			          <option>f</option>
-			           <option>g</option>
-			           <option>h</option>
-			          <option>i</option>
-			           <option>j</option>
-			           <option>k</option>
-			          <option>l</option>
-			           <option>m</option>
-			           <option>n</option>
-			          <option>o</option>
-			           <option>p</option>
-			           <option>q</option>
-			          <option>r</option>
-			           <option>s</option>
-			             <option>t</option>
-			           <option>u</option>
-			          <option>v</option>
-			           <option>w</option>
-			           <option>x</option>
-			          <option>y</option>
-			           <option>z</option>
-			    </select>
-			    
+                <legend>Index Group C</legend>
+			    <select name="group">
+			        <option selected="selected">c</option>
+			    </select><br />
+			    <legend>Is this the first index group?</legend>
+			    <select name="first">
+			    <option selected="selected">no</option>
+			    <option>yes</option>
 			    </select>
 			</fieldset>
         	<table id="terms" class="form">
@@ -122,7 +100,23 @@
         </form>
 		
     </body>
-
+	<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=9046834; 
+var sc_invisible=1; 
+var sc_security="ec55ba17"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="free hit
+counter" href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="http://c.statcounter.com/9046834/0/ec55ba17/1/"
+alt="free hit counter"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
 </html>
 
 

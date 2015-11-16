@@ -16,19 +16,63 @@
           font-family:"Helvetica", sans-serif;
           font-size:0.7em;
           text-indent:0;
-      }</style>
+      }
+      section {
+    content: attr(epub-type) "index-group";
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+ul li {
+    font-size: 1em;
+    text-indent: -1em;
+    padding-left: 1em;
+    line-height: 1.8em;
+    text-align: left;
+    list-style: none;
+}
+
+li section {
+content: attr(epub-type) "index-group";
+ font-size: 1em;
+    text-indent: 1em;
+    padding-left: 1em;
+    line-height: 1em;
+    text-align: left;
+    list-style: none;
+    margin-top:auto;
+    }
+
+p.index {
+    text-indent: -1em;
+    padding-left: 2em;
+    line-height: 1.8em;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+	
+}
+
+a {
+text-decoration: none;
+}
+
+            
+            </style>
         </head>
         <body>
             <section epub:type="index">
                 <div class="page">
                     <span epub:type="pagebreak" id="page" title=""></span>
                     <h1 id="ch7" class="chaptitle"><span class="span3">_</span><span class="span4">INDEX</span></h1>
-                    <!--A-->
+              <xsl:for-each select="//indexGroup">
                     <section epub:type="index-group">
                         <ul>
                             
             
-                <xsl:for-each select="//entry">
+                <xsl:for-each select="entry">
                 <li>
                     <span epub:type="index-term">
                      <xsl:value-of select="term"/>
@@ -64,6 +108,7 @@
     
         </ul>
                     </section>
+                    </xsl:for-each>
                 </div>
                     </section>
     
