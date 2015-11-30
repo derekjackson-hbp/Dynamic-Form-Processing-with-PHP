@@ -39,7 +39,7 @@
 
 		for ($z=1; $z <= $total; $z++) {
 		
-		echo file_put_contents ( '../index/test.xml', 
+		file_put_contents ( '../index/test.xml', 
 		"\n".'<entry>'."\n".
 		 '<term>'.${"term{$z}"}.'</term>'."\n".
 		 '<finders>'."\n", FILE_APPEND);
@@ -212,9 +212,9 @@
            
         <!--<label> Write this index to the file? </label>
         <input type="submit" />-->
-        <a target="blank" class="submit" href=<?php echo '"../index/test.xml" type="button">' ?> review XML <a/>
-        <a href="../index.html">Continue the Index</a>
-        
+        <a target="blank" class="submit" href=<?php echo '"../index/test.xml" type="button">' ?> review XML <a/><br/>
+        <a href="../index_b/index_b.php">Continue the Index</a><br/>
+        <a href="../common/endIndex.php">Complete the Index</a>        
     </fieldset>
     </form>
     </body>

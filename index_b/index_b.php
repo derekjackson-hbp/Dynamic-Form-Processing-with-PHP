@@ -10,15 +10,37 @@
         <form action="../common/process2.php" class="register" method="POST">
             <h1>Index</h1>
 			<fieldset class="row1">
-                <legend>Index Group B</legend>
-			    <select name="group">
-			        <option selected="selected">b</option>
-			    </select><br />
-			    <legend>Is this the first index group?</legend>
-			    <select name="first">
-			    <option selected="selected">no</option>
-			    <option>yes</option>
+                <legend>Index Group</legend>
+			    <select style="width:3em;" name="group">
+			        <option> a </option>
+			         <option selected="selected" style="margin-left:.5em;">b</option>
+			          <option>c</option>
+			           <option>d</option> 
+			          <option>e</option>
+			          <option>f</option>
+			           <option>g</option>
+			           <option>h</option>
+			          <option>i</option>
+			           <option>j</option>
+			           <option>k</option>
+			          <option>l</option>
+			           <option>m</option>
+			           <option>n</option>
+			          <option>o</option>
+			           <option>p</option>
+			           <option>q</option>
+			          <option>r</option>
+			           <option>s</option>
+			             <option>t</option>
+			           <option>u</option>
+			          <option>v</option>
+			           <option>w</option>
+			           <option>x</option>
+			          <option>y</option>
+			           <option>z</option>
 			    </select>
+			  
+			   
 			</fieldset>
         	<table id="terms" class="form">
         		
