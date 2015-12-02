@@ -25,18 +25,22 @@ $contents = file_get_contents("../common/final.xml");
 $contents = str_replace($line, '', $contents);
 file_put_contents("../common/final.xml", $contents);
 
-$xsl = new DOMDocument();
-$xsl->load("../common/transform.xsl");
-$inputdom = new DomDocument();
-$inputdom->load("../common/final.xml");
+//$xml = new DOMDocument;
+//$xml->load('../common/final.xml');
 
-$proc = new XSLTProcessor();
-$xsl = $proc->importStylesheet($xsl);
-$proc->setParameter(null, "", "");
+// Load XSL file
+//$xsl = new DOMDocument;
+//$xsl->load('../common/transform.xsl');
 
-$newdom = $proc->transformToDoc($inputdom);
+// Configure the transformer
+//$proc = new XSLTProcessor;
 
-file_put_contents("../common/index.html", $newdom);
+// Attach the xsl rules
+//$proc->importStyleSheet($xsl);
+
+//newdom = $proc->transformToDOC($xml);
+
+//file_put_contents("../common/index.html", $newdom);
 
 // $fr = fopen('../index/test.xml', 'r+');
 //  fseek($fr, -8, SEEK_END);
@@ -46,6 +50,7 @@ file_put_contents("../common/index.html", $newdom);
 
 
 		?>
+
         <a target="blank" href="../index/test.xml">review XML<a/></br>
         <a target="blank" href="../common/final.xml">review raw XML<a/></br>
        
