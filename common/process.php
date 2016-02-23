@@ -76,7 +76,7 @@ file_put_contents ( '../index/test.xml', '<?xml-stylesheet type="text/xsl" href=
 				      $hrefend = '';
 				      };
 		 
-		 echo file_put_contents ('../index/test.xml', 
+		 file_put_contents ('../index/test.xml', 
 		 '<group>'."\n".'<start>'."\n".
 		 '<paragraph>'.$hrefstrt.'</paragraph>'."\n".
 		 '<page>'. $va[$a].'</page>'."\n".
@@ -125,7 +125,7 @@ file_put_contents ( '../index/test.xml', '<?xml-stylesheet type="text/xsl" href=
 				<td class="term2">
 				<p><label>Index Term
         		</label></p>
-        		<?php echo '<input name="term'.$x.'" readonly="readonly"  required="required" type="text" value="'.${"term{$x}"}.'" method="POST"/>'
+        		<?php echo '<input style="width:300px" name="term'.$x.'" readonly="readonly"  required="required" type="text" value="'.${"term{$x}"}.'" method="POST"/>'
         		?>
         		<p id="rowC"></p>
         		

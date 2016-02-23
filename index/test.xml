@@ -1,4 +1,4 @@
-
+<?xml-stylesheet type="text/xsl" href="../common/transform.xsl"?>
 <index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../common/index.xsd">
 <indexGroup>
 
@@ -7,7 +7,7 @@
 <finders>
 <group>
 <start>
-<paragraph>ch0p.xhtml#p2_78</paragraph>
+<paragraph>ch0p.xhtml#pp2_78</paragraph>
 <page>18</page>
 </start>
 <end>

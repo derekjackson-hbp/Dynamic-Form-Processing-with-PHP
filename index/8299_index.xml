@@ -1,4 +1,4 @@
-
+<?xml-stylesheet type="text/xsl" href="../common/transform.xsl"?>
 <index xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../common/index.xsd">
 <indexGroup>
 
@@ -7,7 +7,7 @@
 <finders>
 <group>
 <start>
-<paragraph>ch0p.xhtml#p2_78</paragraph>
+<paragraph>ch02.xhtml#p2_78</paragraph>
 <page>18</page>
 </start>
 <end>
@@ -33,7 +33,7 @@
 <finders>
 <group>
 <start>
-<paragraph>ch0p.xhtml#pp2_83</paragraph>
+<paragraph>ch02.xhtml#p2_83</paragraph>
 <page>20</page>
 </start>
 <end>
@@ -49,7 +49,7 @@
 <finders>
 <group>
 <start>
-<paragraph>ch0p.xhtml#pp2_49</paragraph>
+<paragraph>ch02.xhtml#p2_49</paragraph>
 <page>51</page>
 </start>
 <end>
@@ -75,7 +75,7 @@
 <finders>
 <group>
 <start>
-<paragraph>ch0p.xhtml#pp2_11</paragraph>
+<paragraph>ch02.xhtml#p2_11</paragraph>
 <page>8</page>
 </start>
 <end>
@@ -101,7 +101,7 @@
 <finders>
 <group>
 <start>
-<paragraph>ch0p.xhtml#pp2_150</paragraph>
+<paragraph>ch02.xhtml#p2_150</paragraph>
 <page>10</page>
 </start>
 <end>
@@ -117,7 +117,7 @@
 <finders>
 <group>
 <start>
-<paragraph>ch0p.xhtml#pp2_2</paragraph>
+<paragraph>ch02.xhtml#p2_2</paragraph>
 <page>4</page>
 </start>
 <end>
@@ -133,7 +133,7 @@
 <finders>
 <group>
 <start>
-<paragraph>ch0p.xhtml#pp2_3</paragraph>
+<paragraph>ch02.xhtml#p2_3</paragraph>
 <page>5</page>
 </start>
 <end>
@@ -661,7 +661,7 @@
 </group>
 <group>
 <start>
-<paragraph>ch0p.xhtml#pp3_45</paragraph>
+<paragraph>ch03.xhtml#p3_45</paragraph>
 <page>44</page>
 </start>
 <end>
@@ -1951,7 +1951,7 @@
  <indexGroup> 
 
 <entry>
-<term>savings and loan institutions (S&Ls)</term>
+<term>savings and loan institutions (S&#x0026;Ls)</term>
 <finders>
 <group>
 <start>
@@ -2113,7 +2113,7 @@
 </entry>
 
 <entry>
-<term>Standard & Poor’s</term>
+<term>Standard &#x0026; Poor’s</term>
 <finders>
 <group>
 <start>

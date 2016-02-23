@@ -56,17 +56,17 @@
         		
         		<p><label>Index Term
         		</label></p>
-        		<input name="term1" required="required" type="text"/>
+        		<input name="term1" required="required" type="text" style="width:230px"/>
         		<p id="rowC"></p>
         		
                 <p>
 					
-                    
-					<label>Does this term have a sub group?</label>
-                    <label>no</label>
+        <!--            
+					<label>Does this term have a sub group?</label><br/>
+					<label>no</label>
                     <input name="hasSubGroup" id="no" type="radio"></input>
                     <label>yes</label>
-                    <input name="hasSubGroup" id="yes" type="radio"></input>
+                    <input name="hasSubGroup" id="yes" type="radio"></input> -->
                 </p>
         					
         				
